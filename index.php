@@ -114,6 +114,7 @@ $faqs = [
             position: relative;
             top: -1.5px;
             vertical-align: middle;
+            cursor: pointer;
         }
 
         #site_header {
@@ -160,7 +161,9 @@ $faqs = [
     
     <header id="site_header" class="p-3">
         <div class="header_top pb-3">
+            <a href="#">
             <img src="	https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Logo Google">
+            </a>
             <span>
                 Privacy e termini
             </span>
@@ -181,21 +184,21 @@ $faqs = [
     <main>  
         <div class="container content px-5">
             <?php foreach($faqs as $faq) : ?>
-                <h2 class="px-5 mx-5">
+                <h2 class="px-lg-5 mx-lg-5">
                     <?= $faq['request'] ?>
                 </h2>
                 <?php foreach($faq['answers'] as $answer) : ?>
-                    <p class="px-5 mx-5">
+                    <p class="px-lg-5 mx-lg-5">
                         <?= $answer ?>.
                     </p>
                 <?php endforeach; ?>
             <?php endforeach; ?>
         </div>
     </main> 
-    
+
     <footer class="d-flex align-items-center gap-2">
         <div class="container px-5">
-            <div class="px-5 mx-5">
+            <div class="px-lg-5 mx-lg-5">
                 <?php foreach($footer as $link) :?>
 
                     <a href="#" class="me-2">
