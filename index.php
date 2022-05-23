@@ -22,6 +22,8 @@ $nav = [
     ],
 ];
 
+$footer = [ 'Google', 'Tutto su Google', ' Privacy', 'Termini' ];
+
 $faqs = [
     [
         "request" => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
@@ -96,6 +98,10 @@ $faqs = [
             padding-top: 20px;
         }
 
+        a {
+            text-decoration: none;
+        }
+
         span {
             color: #5f6368;
             opacity: 1;
@@ -119,21 +125,33 @@ $faqs = [
             top: 0;
             left: 0;
         }
+
         #site_header a {
             color: #5f6368;
             font-size: 15px;
             font-weight: 600;
             padding: 0 0 6px 0;
-            text-decoration: none;
         }
+        
         #site_header a.active {
             color: #3367d6;
             padding-bottom: 6px;
             border-bottom: 4px solid #3367d6;
         }
 
-        .container {
+        .container.content {
             padding: 5rem 0 3rem;
+        }
+
+        footer {
+            background: #f5f5f5;
+            height: 50px;
+            border-top: 1px solid #eee;
+        }
+
+        footer a {
+            font-size: 11px;
+            color: rgba(61,61,61,.8);
         }
 
     </style>
@@ -160,7 +178,7 @@ $faqs = [
         </nav>
     </header>
 
-    <div class="container px-5">
+    <div class="container content px-5">
         <?php foreach($faqs as $faq) : ?>
             <h2 class="px-5 mx-5">
                 <?= $faq['request'] ?>
@@ -172,6 +190,20 @@ $faqs = [
             <?php endforeach; ?>
         <?php endforeach; ?>
     </div>
+
+    <footer class="d-flex align-items-center gap-2">
+        <div class="container px-5">
+            <div class="px-5 mx-5">
+                <?php foreach($footer as $link) :?>
+
+                    <a href="#" class="me-2">
+                        <?= $link ?>
+                    </a>
+
+                <?php endforeach?>
+            </div>
+        </div>
+    </footer>
 
 
 <!-- bootstrap cdn js -->
