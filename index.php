@@ -68,94 +68,15 @@ $faqs = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Google FAQ</title>
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- bootstrap cdn css -->
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-size: 14px;
-            font-weight: 400;
-        }
-
-        h2 {
-            color: #3c4043;
-            font-family: "Google Sans",sans-serif;
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 32px;
-            margin: 0;
-            padding: 64px 0 0 0;
-        }
-
-        p {
-            margin: 10px 0;
-            line-height: 24px;
-            padding-top: 20px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        span {
-            color: #5f6368;
-            opacity: 1;
-            padding-left: 4px;
-            display: inline-block;
-            font-family: "Product Sans",Arial,sans-serif;
-            font-size: 22px;
-            line-height: 24px;
-            padding-left: 8px;
-            position: relative;
-            top: -1.5px;
-            vertical-align: middle;
-            cursor: pointer;
-        }
-
-        #site_header {
-            background-color: white;
-            width: 100%;
-            height: 89px;
-            border-bottom: 1px solid #5f6368;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        #site_header a {
-            color: #5f6368;
-            font-size: 15px;
-            font-weight: 600;
-            padding: 0 0 6px 0;
-        }
-        
-        #site_header a.active {
-            color: #3367d6;
-            padding-bottom: 6px;
-            border-bottom: 4px solid #3367d6;
-        }
-
-        .container.content {
-            padding: 5rem 0 3rem;
-        }
-
-        footer {
-            background: #f5f5f5;
-            height: 50px;
-            border-top: 1px solid #eee;
-        }
-
-        footer a {
-            font-size: 11px;
-            color: rgba(61,61,61,.8);
-        }
-
-    </style>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -175,7 +96,7 @@ $faqs = [
                     <?= $menu["text"] ?>
                 </a>
 
-            <?php endforeach?>
+            <?php endforeach ?>
 
             
         </nav>
