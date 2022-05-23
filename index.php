@@ -177,20 +177,22 @@ $faqs = [
             
         </nav>
     </header>
-
-    <div class="container content px-5">
-        <?php foreach($faqs as $faq) : ?>
-            <h2 class="px-5 mx-5">
-                <?= $faq['request'] ?>
-            </h2>
-            <?php foreach($faq['answers'] as $answer) : ?>
-                <p class="px-5 mx-5">
-                    <?= $answer ?>.
-                </p>
+    
+    <main>  
+        <div class="container content px-5">
+            <?php foreach($faqs as $faq) : ?>
+                <h2 class="px-5 mx-5">
+                    <?= $faq['request'] ?>
+                </h2>
+                <?php foreach($faq['answers'] as $answer) : ?>
+                    <p class="px-5 mx-5">
+                        <?= $answer ?>.
+                    </p>
+                <?php endforeach; ?>
             <?php endforeach; ?>
-        <?php endforeach; ?>
-    </div>
-
+        </div>
+    </main> 
+    
     <footer class="d-flex align-items-center gap-2">
         <div class="container px-5">
             <div class="px-5 mx-5">
